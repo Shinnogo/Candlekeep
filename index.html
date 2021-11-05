@@ -293,6 +293,8 @@ Error message and password prompt
 
 <li>$:/DnD/Calender/Template</li>
 
+<li>$:/DnD/Calender/Template 1</li>
+
 <li>$:/DnD/Class/Button</li>
 
 <li>$:/DnD/Class/Table</li>
@@ -441,6 +443,8 @@ Error message and password prompt
 
 <li>$:/state/advancedsearch/currentTab</li>
 
+<li>$:/state/CreationName</li>
+
 <li>$:/state/edit/references--1040107359</li>
 
 <li>$:/state/edit/references--1124642175</li>
@@ -506,6 +510,8 @@ Error message and password prompt
 <li>$:/state/tab--2067929534</li>
 
 <li>$:/state/tab--2104403042</li>
+
+<li>$:/state/tab--2112689675</li>
 
 <li>$:/state/tab--368868592</li>
 
@@ -573,6 +579,8 @@ Error message and password prompt
 
 <li>$:/state/tree/$:/snippets/</li>
 
+<li>$:/state/tree/$:/state/</li>
+
 <li>$:/state/tree/$:/tags/</li>
 
 <li>$:/state/tree/$:/temp/</li>
@@ -612,8 +620,6 @@ Error message and password prompt
 <li>$:/tags/ViewToolbar</li>
 
 <li>$:/temp/info-plugin</li>
-
-<li>$:/temp/SelectReveal/pc</li>
 
 <li>$:/theme</li>
 
@@ -11505,8 +11511,13 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20210621173135473" modified="20211101153258672" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Battle Tracker''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="title hp hp_max main bonus reaction movement conditions other" tbl-expand="" tbl-filter="[tag[Player Battle Turn]]" tbl-limit="15" tbl-mode="normal" tbl-page-marker="Turn 01" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Battle/Player Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
 </div>
-<div created="20210628154248160" modified="20210628154302129" tags="Button" title="$:/DnD/Calender/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Calender/Template&quot;&gt;Create a New Day&lt;/$button&gt;</pre>
+<div created="20210628154248160" modified="20211105155251274" tags="Button" title="$:/DnD/Calender/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Calender/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Day
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210628153716762" modified="20210628155150012" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''In-game Calender''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="tbl-expand title event irl_date" tbl-expand="" tbl-filter="[tag[Calender Day]!prefix[$]]" tbl-limit="20" tbl-mode="normal" tbl-page-marker="Day 001" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="true" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Calender/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11514,8 +11525,16 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20210628154357924" event="" irl_date="" modified="20210628154553340" tags="[[Calender Day]]" title="$:/DnD/Calender/Template">
 <pre></pre>
 </div>
-<div created="20210623145928698" modified="20210623160915892" tags="Button" title="$:/DnD/Class/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Class/Template&quot;&gt;Create a New Class&lt;/$button&gt;</pre>
+<div created="20211105160140332" event="" irl_date="" modified="20211105160140332" tags="[[Calender Day]]" title="$:/DnD/Calender/Template 1">
+<pre></pre>
+</div>
+<div created="20210623145928698" modified="20211105155329829" tags="Button" title="$:/DnD/Class/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Class/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Class
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210623150041402" modified="20210628155012833" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Classes''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="tbl-expand title lvl1_hp lvl+_hp proficiencies skills equipment gold multiclass_requirement" tbl-expand="" tbl-filter="[tag[Class]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Class/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11557,8 +11576,13 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210628142102745" modified="20210628142122555" tags="Button" title="$:/DnD/Faction/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Faction/Template&quot;&gt;Create a New Faction&lt;/$button&gt;</pre>
+<div created="20210628142102745" modified="20211105155318889" tags="Button" title="$:/DnD/Faction/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Faction/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Faction
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210628141821005" modified="20211017033010656" tags="" tbl-add-records="" tbl-anything="&lt;$list filter=&quot;[search:faction&lt;currentRecord&gt;tag[NPC]]&quot;&gt;
 &lt;ul style=&quot;margin:0px;padding:0 0 0 1rem;&quot;&gt;
@@ -11619,8 +11643,13 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210630041022488" modified="20210630053609810" tags="Button" title="$:/DnD/GM Note/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/GM Note/Template&quot;&gt;Create a GM Note&lt;/$button&gt;</pre>
+<div created="20210630041022488" modified="20211105155233432" tags="Button" title="$:/DnD/GM Note/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/GM Note/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a GM Note
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210630042045237" modified="20211017032429030" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''GM Notes''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="tbl-expand title note_source" tbl-expand="" tbl-filter="[tag[GM Note]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/GM Note/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11636,8 +11665,13 @@ GM Notes:&lt;br&gt;
 &lt;$link/&gt;&lt;br&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210628145554125" modified="20210628145613518" tags="Button" title="$:/DnD/Item/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Item/Template&quot;&gt;Create a New Item&lt;/$button&gt;</pre>
+<div created="20210628145554125" modified="20211105155301804" tags="Button" title="$:/DnD/Item/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Item/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Item
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210628145806260" modified="20211101113014024" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Items''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-tight" tbl-columns="tbl-expand title value weight rarity type bonus notes pc" tbl-expand="" tbl-filter="[tag[Item]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Item/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11681,8 +11715,13 @@ GM Notes:&lt;br&gt;
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210628143925778" modified="20210628143946433" tags="Button" title="$:/DnD/Location/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Location/Template&quot;&gt;Create a New Location&lt;/$button&gt;</pre>
+<div created="20210628143925778" modified="20211105155313238" tags="Button" title="$:/DnD/Location/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Location/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Location
+&lt;/$button&gt;</pre>
 </div>
 <div created="20211019122042927" modified="20211019124009668" tags="$:/tags/table/BodyTemplate" tbl-column-list="tbl-sublocation" tbl-noedit="sublocations" title="$:/DnD/Location/Column/Body">
 <pre>&lt;td&gt;&lt;$list filter=&quot;[search:location&lt;currentRecord&gt;tag[Location]sort[]]&quot;&gt;
@@ -11820,8 +11859,13 @@ $details$&lt;/p&gt;
 &lt;/$reveal&gt;
 \end</pre>
 </div>
-<div created="20210628151905793" modified="20210628151920246" tags="Button" title="$:/DnD/NPC/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/NPC/Template&quot;&gt;Create a New NPC&lt;/$button&gt;</pre>
+<div created="20210628151905793" modified="20211105155256849" tags="Button" title="$:/DnD/NPC/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/NPC/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New NPC
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210628151935425" modified="20211101040512399" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''NPCs''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="alive" tbl-checkbox-tag="" tbl-checkbox-tip="Alive" tbl-checkbox-value-selected="Yes" tbl-checkbox-value-unselected="No" tbl-class="tbl-style-tight" tbl-columns="tbl-expand title location faction race age alignment notes tbl-checkbox" tbl-expand="" tbl-filter="[tag[NPC]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]search:location:regexp&lt;filter1&gt;search:faction:regexp&lt;filter2&gt;search:alive:regexp&lt;filter3&gt;]" tbl-limit="9999999" tbl-mode="normal" tbl-page-marker="" tbl-search="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="false" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" tble-filter1="[" tble-filter2="[" tble-filter3="[" title="$:/DnD/NPC/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11876,8 +11920,13 @@ $details$&lt;/p&gt;
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210623151733672" modified="20210623160934033" tags="Button" title="$:/DnD/Pantheon/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Pantheon/Template&quot;&gt;Create a New God&lt;/$button&gt;</pre>
+<div created="20210623151733672" modified="20211105155324732" tags="Button" title="$:/DnD/Pantheon/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Pantheon/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New God
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210623155940222" modified="20211024025947653" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Pantheon''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="tbl-expand title aliases alignment domain symbol" tbl-expand="" tbl-filter="[tag[Pantheon]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Pantheon/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -11918,8 +11967,13 @@ $details$&lt;/p&gt;
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210520033123928" modified="20210623160820934" tags="Button" title="$:/DnD/PC/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/PC/Template&quot;&gt;Create a New PC&lt;/$button&gt;</pre>
+<div created="20210520033123928" modified="20211105155148765" tags="Button" title="$:/DnD/PC/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/PC/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New PC
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210520034606677" modified="20211101085134340" tbl-add-records="" tbl-anything="&lt;$list filter=&quot;[search:pc&lt;currentRecord&gt;tag[Item]]&quot;&gt;
 &lt;ul style=&quot;margin:0px;padding:0 0 0 1rem;&quot;&gt;
@@ -11996,8 +12050,13 @@ $details$&lt;/p&gt;
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210629071625344" modified="20210630040253929" tags="Button" title="$:/DnD/Prep/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Prep/Template&quot;&gt;Prep for a New Session&lt;/$button&gt;</pre>
+<div created="20210629071625344" modified="20211105155239679" tags="Button" title="$:/DnD/Prep/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Prep/Template&quot; date=&lt;&lt;now YYYY0MM0DD&gt;&gt;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Prep for a New Session
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210629071845791" date="20210629" modified="20210630035740826" secret01="SECRET" secret02="SECRET" secret03="SECRET" secret04="SECRET" secret05="SECRET" secret06="SECRET" secret07="SECRET" secret08="SECRET" secret09="SECRET" secret10="SECRET" tags="[[Session Prep]]" title="$:/DnD/Prep/Template">
 <pre>!Review the Characters
@@ -12071,8 +12130,13 @@ no
 \end
 {{$:/core/templates/tiddlywiki5.html}}</pre>
 </div>
-<div created="20210628144716305" modified="20210628144734003" tags="Button" title="$:/DnD/Quest/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Quest/Template&quot;&gt;Create a New Quest&lt;/$button&gt;</pre>
+<div created="20210628144716305" modified="20211105155307049" tags="Button" title="$:/DnD/Quest/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Quest/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Quest
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210628144803154" modified="20211101040443191" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Quests or Rumors''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="progress" tbl-checkbox-tag="" tbl-checkbox-tip="Progress" tbl-checkbox-value-selected="Completed" tbl-checkbox-value-unselected="Incomplete" tbl-class="tbl-style-default" tbl-columns="tbl-expand title source goals obstacles details tbl-checkbox" tbl-expand="" tbl-filter="[tag[Quest]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]search:progress:regexp&lt;filter1&gt;]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" tble-filter1="[" title="$:/DnD/Quest/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -12109,8 +12173,13 @@ no
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210623144856718" modified="20210623160903632" tags="Button" title="$:/DnD/Race/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Race/Template&quot;&gt;Create a New Race&lt;/$button&gt;</pre>
+<div created="20210623144856718" modified="20211105155335244" tags="Button" title="$:/DnD/Race/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Race/Template&quot;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create a New Race
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210623144325698" modified="20210628155005141" tags="" tbl-add-records="" tbl-anything="" tbl-button-actions="" tbl-button-icon="{{$:/core/images/menu-button}}" tbl-button-tip="" tbl-caption="''Races''" tbl-checkbox-actions-selected="" tbl-checkbox-actions-unselected="" tbl-checkbox-field="" tbl-checkbox-tag="" tbl-checkbox-tip="" tbl-checkbox-value-selected="" tbl-checkbox-value-unselected="" tbl-class="tbl-style-default" tbl-columns="tbl-expand title life_span traits vision speed temperament notes" tbl-expand="" tbl-filter="[tag[Race]search:-text,tags,created,modified:regexp&lt;search&gt;!prefix[$]]" tbl-limit="10" tbl-mode="normal" tbl-page-marker="" tbl-search="" tbl-show-caption="true" tbl-show-colgroup="false" tbl-show-edit="true" tbl-show-footer="false" tbl-show-header="true" tbl-show-mode="true" tbl-show-pagination="auto" tbl-sort-by="title" tbl-sort-negate="false" tbl-sort-type="nsort" tbl-style-colgroup="" tbl-style-container="" tbl-style-table="width:100%;" title="$:/DnD/Race/Table">
 <pre>&lt;&lt;table&gt;&gt;</pre>
@@ -12152,8 +12221,13 @@ no
 &lt;/table&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20210621164442697" modified="20210623160946933" tags="Button" title="$:/DnD/Session/Button">
-<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;$:/DnD/Session/Template&quot;&gt;Create Notes for a New Session&lt;/$button&gt;</pre>
+<div created="20210621164442697" modified="20211105155246118" tags="Button" title="$:/DnD/Session/Button">
+<pre>&lt;$button&gt;
+&lt;$action-createtiddler $basetitle={{$:/state/CreationName}} $template=&quot;$:/DnD/Session/Template&quot; date=&lt;&lt;now YYYY0MM0DD&gt;&gt;/&gt;
+&lt;$action-navigate $to={{$:/state/CreationName}}/&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/CreationName&quot; text=&quot;&quot;/&gt;
+Create Notes for a New Session
+&lt;/$button&gt;</pre>
 </div>
 <div created="20210621165345770" date="20210622" modified="20210711030251619" tags="[[Session Notes]]" title="$:/DnD/Session/Template">
 <pre>&lt;&lt;toggleBlock &quot;&quot;&quot;Title&quot;&quot;&quot;
@@ -12195,44 +12269,67 @@ Content
 Content
 &quot;&quot;&quot;&gt;&gt;</pre>
 </div>
-<div created="20211104151117333" current-tiddler="$:/TagManager" modified="20211104154722553" title="$:/HistoryList" type="application/json">
+<div created="20211105145957491" current-tiddler="$:/Import" modified="20211105160413091" title="$:/HistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;Home Page&quot;
     },
     {
-        &quot;title&quot;: &quot;Quick View&quot;,
+        &quot;title&quot;: &quot;$:/ControlPanel&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 187.53125,
-            &quot;left&quot;: 408.390625,
-            &quot;width&quot;: 11.65625,
-            &quot;right&quot;: 420.046875,
-            &quot;bottom&quot;: 198.53125,
-            &quot;height&quot;: 11
+            &quot;top&quot;: 188.71875,
+            &quot;left&quot;: 1498,
+            &quot;width&quot;: 21,
+            &quot;right&quot;: 1519,
+            &quot;bottom&quot;: 214.96875,
+            &quot;height&quot;: 26.25
         }
     },
     {
-        &quot;title&quot;: &quot;Draft of 'Quick View'&quot;
+        &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;Quick View&quot;
+        &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/TagManager&quot;,
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/temp/CreationName&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 724.8125,
+            &quot;left&quot;: 1487.03125,
+            &quot;width&quot;: 89.21875,
+            &quot;right&quot;: 1576.25,
+            &quot;bottom&quot;: 743.8125,
+            &quot;height&quot;: 19
+        }
+    },
+    {
+        &quot;title&quot;: &quot;Draft of '$:/temp/CreationName'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/state/CreationName&quot;,
         &quot;fromPageRect&quot;: {
             &quot;top&quot;: 564.8125,
-            &quot;left&quot;: 115.03125,
-            &quot;width&quot;: 76.3125,
-            &quot;right&quot;: 191.34375,
+            &quot;left&quot;: 1487.03125,
+            &quot;width&quot;: 89.21875,
+            &quot;right&quot;: 1576.25,
             &quot;bottom&quot;: 583.8125,
             &quot;height&quot;: 19
         }
     },
     {
-        &quot;title&quot;: &quot;Draft of '$:/TagManager'&quot;
+        &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/TagManager&quot;
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;Draft of '$:/DnD/Faction/Template 1'&quot;
     },
     {
         &quot;title&quot;: &quot;$:/Import&quot;
@@ -12241,175 +12338,158 @@ Content
         &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;Draft of 'New Tiddler'&quot;
-    },
-    {
-        &quot;title&quot;: &quot;New Tiddler&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/Import&quot;
-    },
-    {
-        &quot;title&quot;: &quot;Draft of '$:/DnD/Quest/Template 1'&quot;
-    },
-    {
-        &quot;title&quot;: &quot;$:/DnD/Quest/Template 1&quot;
-    },
-    {
-        &quot;title&quot;: &quot;Draft of '$:/DnD/Quest/Template 1'&quot;
-    },
-    {
-        &quot;title&quot;: &quot;New Tiddler&quot;,
+        &quot;title&quot;: &quot;ff&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 389.8125,
-            &quot;left&quot;: 855,
-            &quot;width&quot;: 74.546875,
-            &quot;right&quot;: 929.546875,
-            &quot;bottom&quot;: 408.8125,
+            &quot;top&quot;: 231.53125,
+            &quot;left&quot;: 269.109375,
+            &quot;width&quot;: 156.140625,
+            &quot;right&quot;: 425.25,
+            &quot;bottom&quot;: 255.53125,
+            &quot;height&quot;: 24
+        }
+    },
+    {
+        &quot;title&quot;: &quot;Draft of 'ff'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;ff&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 193.53125,
+            &quot;left&quot;: 269.109375,
+            &quot;width&quot;: 147.859375,
+            &quot;right&quot;: 416.96875,
+            &quot;bottom&quot;: 217.53125,
+            &quot;height&quot;: 24
+        }
+    },
+    {
+        &quot;title&quot;: &quot;Draft of 'ff'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;Quest or Rumor&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 153.609375,
+            &quot;left&quot;: 518.125,
+            &quot;width&quot;: 12.484375,
+            &quot;right&quot;: 530.609375,
+            &quot;bottom&quot;: 165.609375,
+            &quot;height&quot;: 12
+        }
+    },
+    {
+        &quot;title&quot;: &quot;$:/DnD/GM Note/Button&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 421.8125,
+            &quot;left&quot;: 1501.03125,
+            &quot;width&quot;: 41.5625,
+            &quot;right&quot;: 1542.59375,
+            &quot;bottom&quot;: 440.8125,
             &quot;height&quot;: 19
         }
     },
     {
-        &quot;title&quot;: &quot;Draft of '$:/DnD/Item/Template 1'&quot;
+        &quot;title&quot;: &quot;Draft of '$:/DnD/GM Note/Button'&quot;
     },
     {
-        &quot;title&quot;: &quot;Alchemical Equipment&quot;,
+        &quot;title&quot;: &quot;$:/DnD/GM Note/Button&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/temp/CreationName&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 461.703125,
-            &quot;left&quot;: 118.71875,
-            &quot;width&quot;: 63.71875,
-            &quot;right&quot;: 182.4375,
-            &quot;bottom&quot;: 498.703125,
-            &quot;height&quot;: 37
+            &quot;top&quot;: 781.8125,
+            &quot;left&quot;: 1487.03125,
+            &quot;width&quot;: 89.21875,
+            &quot;right&quot;: 1576.25,
+            &quot;bottom&quot;: 800.8125,
+            &quot;height&quot;: 19
         }
     },
     {
-        &quot;title&quot;: &quot;$:/ControlPanel&quot;,
+        &quot;title&quot;: &quot;Draft of '$:/temp/CreationName'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;ff&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 232.71875,
-            &quot;left&quot;: 957,
-            &quot;width&quot;: 21,
-            &quot;right&quot;: 978,
-            &quot;bottom&quot;: 258.96875,
-            &quot;height&quot;: 26.25
+            &quot;top&quot;: 193.53125,
+            &quot;left&quot;: 269.109375,
+            &quot;width&quot;: 147.859375,
+            &quot;right&quot;: 416.96875,
+            &quot;bottom&quot;: 217.53125,
+            &quot;height&quot;: 24
         }
     },
     {
-        &quot;title&quot;: &quot;Draft of 'New Tiddler'&quot;
+        &quot;title&quot;: &quot;Draft of 'ff'&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/TagManager&quot;,
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/Import&quot;
+    },
+    {
+        &quot;title&quot;: &quot;fff&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 386.8125,
-            &quot;left&quot;: 917.1875,
-            &quot;width&quot;: 112.453125,
-            &quot;right&quot;: 1029.640625,
-            &quot;bottom&quot;: 409.3125,
-            &quot;height&quot;: 22.5
+            &quot;top&quot;: 567.25,
+            &quot;left&quot;: 199.109375,
+            &quot;width&quot;: 147.859375,
+            &quot;right&quot;: 346.96875,
+            &quot;bottom&quot;: 591.25,
+            &quot;height&quot;: 24
         }
     },
     {
-        &quot;title&quot;: &quot;$:/TagManager&quot;,
-        &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 377.8125,
-            &quot;left&quot;: 1441.1875,
-            &quot;width&quot;: 112.453125,
-            &quot;right&quot;: 1553.640625,
-            &quot;bottom&quot;: 400.3125,
-            &quot;height&quot;: 22.5
-        }
+        &quot;title&quot;: &quot;Draft of 'fff'&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/DnD/Location/ViewTable&quot;,
+        &quot;title&quot;: &quot;$:/DnD/NPC/ViewTable&quot;,
         &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 521.8125,
+            &quot;top&quot;: 561.8125,
             &quot;left&quot;: 1501.03125,
             &quot;width&quot;: 61.359375,
             &quot;right&quot;: 1562.390625,
-            &quot;bottom&quot;: 540.8125,
+            &quot;bottom&quot;: 580.8125,
             &quot;height&quot;: 19
         }
+    },
+    {
+        &quot;title&quot;: &quot;Draft of '$:/DnD/NPC/ViewTable'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/DnD/NPC/ViewTable&quot;
     },
     {
         &quot;title&quot;: &quot;$:/Import&quot;
@@ -12418,33 +12498,17 @@ Content
         &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/DnD/Class/ViewTable&quot;,
-        &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 441.8125,
-            &quot;left&quot;: 1501.03125,
-            &quot;width&quot;: 61.359375,
-            &quot;right&quot;: 1562.390625,
-            &quot;bottom&quot;: 460.8125,
-            &quot;height&quot;: 19
-        }
+        &quot;title&quot;: &quot;$:/Import&quot;
     },
     {
-        &quot;title&quot;: &quot;$:/TagManager&quot;,
-        &quot;fromPageRect&quot;: {
-            &quot;top&quot;: 386.8125,
-            &quot;left&quot;: 1441.1875,
-            &quot;width&quot;: 112.453125,
-            &quot;right&quot;: 1553.640625,
-            &quot;bottom&quot;: 409.3125,
-            &quot;height&quot;: 22.5
-        }
+        &quot;title&quot;: &quot;$:/Import&quot;
     }
 ]</pre>
 </div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/DnD/Class/ViewTable]]</pre>
+# [[Calender]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -14672,6 +14736,9 @@ exports.context = contextWidget;
 <div created="20210623152226990" modified="20211104031535904" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
+<div created="20211105154657145" modified="20211105160140333" title="$:/state/CreationName">
+<pre></pre>
+</div>
 <div created="20211019043452025" modified="20211019053741916" title="$:/state/edit/references--1040107359">
 <pre>hide</pre>
 </div>
@@ -14756,7 +14823,7 @@ exports.context = contextWidget;
 <div created="20210520032654781" modified="20211104152033076" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20210520031715274" modified="20211104155840038" title="$:/state/tab--1133515453">
+<div created="20210520031715274" modified="20211105160841978" title="$:/state/tab--1133515453">
 <pre>Public Save Button</pre>
 </div>
 <div created="20210623152226990" modified="20211104031535906" title="$:/state/tab--1498284803">
@@ -14771,6 +14838,9 @@ exports.context = contextWidget;
 <div created="20210628162324535" modified="20210628172106726" title="$:/state/tab--2104403042">
 <pre>$:/core/ui/TiddlerInfo/Fields</pre>
 </div>
+<div created="20211105150004301" modified="20211105150005378" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Basics</pre>
+</div>
 <div created="20211017042819817" modified="20211017042841305" title="$:/state/tab--368868592">
 <pre>$:/plugins/flibbles/relink/ui/TiddlerInfo/References</pre>
 </div>
@@ -14780,8 +14850,8 @@ exports.context = contextWidget;
 <div created="20210520041614597" modified="20210623162707375" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20210520030941072" modified="20211101042853629" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20210520030941072" modified="20211105150001656" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20210623162611546" modified="20210630054739386" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -14789,10 +14859,10 @@ exports.context = contextWidget;
 <div created="20210628162445154" modified="20210628162453956" title="$:/state/tab-693276058">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
 </div>
-<div created="20210623152608272" modified="20211104154718062" title="$:/state/tab/moresidebar-1850697562">
+<div created="20210623152608272" modified="20211105155941318" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20210520031719586" modified="20211104155843452" title="$:/state/tab/sidebar--595412856">
+<div created="20210520031719586" modified="20211105155942985" title="$:/state/tab/sidebar--595412856">
 <pre>Quick View</pre>
 </div>
 <div created="20210621180657353" modified="20210630054544270" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -14801,10 +14871,10 @@ exports.context = contextWidget;
 <div created="20210623161010639" modified="20210623161012060" title="$:/state/tag-manager/Quick View">
 <pre>closed</pre>
 </div>
-<div created="20210623154027382" modified="20211104154713679" title="$:/state/tree/$:/DnD/">
+<div created="20210623154027382" modified="20211105155936498" title="$:/state/tree/$:/DnD/">
 <pre>hide</pre>
 </div>
-<div created="20210623154945661" modified="20211104031621909" title="$:/state/tree/$:/DnD/Battle/">
+<div created="20210623154945661" modified="20211105155040477" title="$:/state/tree/$:/DnD/Battle/">
 <pre>hide</pre>
 </div>
 <div created="20210628154153075" modified="20211104031623491" title="$:/state/tree/$:/DnD/Calender/">
@@ -14819,7 +14889,7 @@ exports.context = contextWidget;
 <div created="20210623154457783" modified="20210623154836131" title="$:/state/tree/$:/DnD/GM Battle/">
 <pre>show</pre>
 </div>
-<div created="20210630041451583" modified="20211019023749767" title="$:/state/tree/$:/DnD/GM Note/">
+<div created="20210630041451583" modified="20211105155409638" title="$:/state/tree/$:/DnD/GM Note/">
 <pre>hide</pre>
 </div>
 <div created="20210630035916352" modified="20210630040022262" title="$:/state/tree/$:/DnD/Item/">
@@ -14840,7 +14910,7 @@ exports.context = contextWidget;
 <div created="20210623154028880" modified="20210623154158454" title="$:/state/tree/$:/DnD/New PC/">
 <pre>show</pre>
 </div>
-<div created="20210815170138398" modified="20211019160609268" title="$:/state/tree/$:/DnD/NPC/">
+<div created="20210815170138398" modified="20211105155933607" title="$:/state/tree/$:/DnD/NPC/">
 <pre>hide</pre>
 </div>
 <div created="20210623160129062" modified="20211019160610523" title="$:/state/tree/$:/DnD/Pantheon/">
@@ -14870,10 +14940,13 @@ exports.context = contextWidget;
 <div created="20210623155810746" modified="20210623155817153" title="$:/state/tree/$:/snippets/">
 <pre>hide</pre>
 </div>
+<div created="20211105154712125" modified="20211105154717900" title="$:/state/tree/$:/state/">
+<pre>hide</pre>
+</div>
 <div created="20211019161141176" modified="20211019161145500" title="$:/state/tree/$:/tags/">
 <pre>hide</pre>
 </div>
-<div created="20210623152623183" modified="20211019161139923" title="$:/state/tree/$:/temp/">
+<div created="20210623152623183" modified="20211105155407794" title="$:/state/tree/$:/temp/">
 <pre>hide</pre>
 </div>
 <div created="20210628162915360" modified="20210628162921268" title="$:/state/tree/$:/temp/advancedsearch/">
@@ -14909,7 +14982,7 @@ exports.context = contextWidget;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20211104151144030" list="[[Home Page]]" modified="20211104154722552" title="$:/StoryList">
+<div created="20211105145959517" list="[[Home Page]]" modified="20211105155901028" title="$:/StoryList">
 <pre></pre>
 </div>
 <div color="#bbb" created="20211104151235788" icon="$:/core/images/tag-button" modified="20211104151242471" title="$:/TagManager">
@@ -15027,7 +15100,7 @@ exports.context = contextWidget;
         },
         &quot;$:/info/startup-timestamp&quot;: {
             &quot;title&quot;: &quot;$:/info/startup-timestamp&quot;,
-            &quot;text&quot;: &quot;20211104151116962&quot;
+            &quot;text&quot;: &quot;20211105145957176&quot;
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
@@ -15079,9 +15152,6 @@ exports.context = contextWidget;
         }
     }
 }</pre>
-</div>
-<div created="20211104152317513" editstate="" modified="20211104152322102" title="$:/temp/SelectReveal/pc">
-<pre></pre>
 </div>
 <div created="20210520032256829" modified="20210630054619086" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -15210,9 +15280,10 @@ exports.context = contextWidget;
 <div color="#323232" created="20210623145028017" icon="$:/core/images/close-others-button" list="$:/DnD/PC/Button $:/DnD/Race/Button $:/DnD/Class/Button $:/DnD/Pantheon/Button $:/DnD/Faction/Button $:/DnD/Location/Button $:/DnD/Quest/Button $:/DnD/Item/Button $:/DnD/NPC/Button $:/DnD/Calender/Button $:/DnD/Session/Button $:/DnD/Prep/Button [[$:/DnD/GM Note/Button]]" modified="20210630041129649" title="Button">
 <pre></pre>
 </div>
-<div created="20210520032443083" modified="20210628154253282" tags="[[Home Page]]" title="Calender">
+<div created="20210520032443083" modified="20211105160327476" tags="[[Home Page]]" title="Calender">
 <pre>{{$:/DnD/Calender/Table}}
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Day&quot;/&gt;
 {{$:/DnD/Calender/Button}}</pre>
 </div>
 <div color="#922020" created="20210628154427734" icon="$:/core/images/list-bullet" modified="20210628154441325" title="Calender Day">
@@ -15221,8 +15292,10 @@ exports.context = contextWidget;
 <div created="20211101074240316" modified="20211101154004609" tags="Location Public" title="Candlekeep" type="Island">
 <pre></pre>
 </div>
-<div color="#3232ff" created="20210520031819779" modified="20210623154627678" tags="[[Home Page]]" title="Class">
-<pre>{{$:/DnD/Class/Button}}
+<div color="#3232ff" created="20210520031819779" modified="20211105154516127" tags="[[Home Page]]" title="Class">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Class&quot;/&gt;
+{{$:/DnD/Class/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Class/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Class/Table!!tbl-search}}&gt;
@@ -15235,8 +15308,10 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Class/Table&quot; field=&quot;tbl-se
 <div created="20211101074409628" location="Candlekeep" modified="20211104032142556" tags="Location Public [[Quick View]]" title="Court of Air" type="Town Square">
 <pre></pre>
 </div>
-<div created="20210520040040918" modified="20210628171656206" tags="$:/tags/SideBar Public" title="Creation Buttons">
-<pre>&lt;$list filter=&quot;[tag[Button]]&quot;&gt;
+<div created="20210520040040918" modified="20211105154516127" tags="$:/tags/SideBar Public" title="Creation Buttons">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Page&quot;/&gt;
+
+&lt;$list filter=&quot;[tag[Button]]&quot;&gt;
 {{!!text}}&lt;br&gt;
 &lt;/$list&gt;</pre>
 </div>
@@ -15282,10 +15357,12 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Class/Table&quot; field=&quot;tbl-se
 <div created="20211101082311446" location="Candlekeep" modified="20211101154020775" tags="Public Location" title="Emerald Doors" type="Gate">
 <pre></pre>
 </div>
-<div color="#32ff32" created="20210520031902662" icon="" modified="20210630052811344" tags="[[Home Page]]" title="Faction">
+<div color="#32ff32" created="20210520031902662" icon="" modified="20211105154516127" tags="[[Home Page]]" title="Faction">
 <pre>NPCs that have the Faction's name in 'faction' like `[[Faction Name]]` will automatically be listed on this table.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Faction&quot;/&gt;
 {{$:/DnD/Faction/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Faction/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Faction/Table!!tbl-search}}&gt;
@@ -15310,10 +15387,12 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Faction/Table&quot; field=&quot;tbl-
 <div color="#323232" created="20210630041631644" icon="$:/core/images/import-button" modified="20210630041828996" title="GM Note">
 <pre></pre>
 </div>
-<div created="20210630040925287" modified="20210630053216764" tags="[[Home Page]]" title="GM Notes">
+<div created="20210630040925287" modified="20211105154516128" tags="[[Home Page]]" title="GM Notes">
 <pre>Add the page you want private notes on to the note_source like this `[[NPC Name]]` and it will automatically update if you change the name of that tiddler later.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New GM Note&quot;/&gt;
 {{$:/DnD/GM Note/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/GM Note/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/GM Note/Table!!tbl-search}}&gt;
@@ -15718,10 +15797,12 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/GM Note/Table&quot; field=&quot;tbl-
 * Go to bedroom for ''SHORT REST''
 &quot;&quot;&quot;&gt;&gt;</pre>
 </div>
-<div color="#3232ff" created="20210520032426579" modified="20210630052842575" tags="[[Home Page]]" title="Item">
+<div color="#3232ff" created="20210520032426579" modified="20211105154516129" tags="[[Home Page]]" title="Item">
 <pre>Add 'pc' like this `[[PC Name]]` and it will automatically update if you change the name of that tiddler later.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Item&quot;/&gt;
 {{$:/DnD/Item/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Item/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Item/Table!!tbl-search}}&gt;
@@ -15743,10 +15824,12 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Item/Table&quot; field=&quot;tbl-sea
 <div alive="Yes" created="20211101080028522" location="Candlekeep" modified="20211101080112060" notes="First person we met, led us to [[Semigum]]" race="Ogre" tags="Public [[Quick View]] NPC" title="Little One">
 <pre></pre>
 </div>
-<div color="#32ff32" created="20210520031911075" modified="20210630052941714" tags="[[Home Page]]" title="Location">
+<div color="#32ff32" created="20210520031911075" modified="20211105154516129" tags="[[Home Page]]" title="Location">
 <pre>NPCs that have the Location's name in 'location' like `[[NPC Name]]` will automatically be listed on this table.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Location&quot;/&gt;
 {{$:/DnD/Location/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Location/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Location/Table!!tbl-search}}&gt;
@@ -15759,10 +15842,12 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Location/Table&quot; field=&quot;tbl
 <div alignment="" created="20211101111903924" modified="20211101153214500" tags="Public [[Quick View]] Pantheon" title="Mistra">
 <pre></pre>
 </div>
-<div color="#32ff32" created="20210520031152463" modified="20210815192230804" tags="[[Home Page]]" title="NPC">
+<div color="#32ff32" created="20210520031152463" modified="20211105154516130" tags="[[Home Page]]" title="NPC">
 <pre>Add 'faction' and 'location' like this `[[Faction/Location Name]]` and it will automatically update if you change the name of those tiddlers later.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New NPC&quot;/&gt;
 {{$:/DnD/NPC/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/NPC/Table&quot; field=&quot;tbl-search&quot;/&gt;
 
@@ -15794,18 +15879,22 @@ Filters:
 &lt;/$set&gt;
 &lt;/$set&gt;</pre>
 </div>
-<div color="#32ff32" created="20210520031826447" modified="20210623165652660" tags="[[Home Page]]" title="Pantheon">
-<pre>{{$:/DnD/Pantheon/Button}}
+<div color="#32ff32" created="20210520031826447" modified="20211105154516131" tags="[[Home Page]]" title="Pantheon">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New God&quot;/&gt;
+{{$:/DnD/Pantheon/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Pantheon/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Pantheon/Table!!tbl-search}}&gt;
 {{$:/DnD/Pantheon/Table}}
 &lt;/$set&gt;</pre>
 </div>
-<div color="#3232ff" created="20210520032501217" modified="20210630052704520" tags="[[Home Page]]" title="PC">
+<div color="#3232ff" created="20210520032501217" modified="20211105154516132" tags="[[Home Page]]" title="PC">
 <pre>Items that have the PC's name in 'pc' like `[[PC Name]]` will automatically be listed on this table.
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New PC&quot;/&gt;
 {{$:/DnD/PC/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/PC/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/PC/Table!!tbl-search}}&gt;
@@ -15838,8 +15927,10 @@ Save Public Wiki
 <div color="#32ff32" created="20210628145159924" modified="20210628145204758" title="Quest">
 <pre></pre>
 </div>
-<div created="20210520031920944" modified="20210815191426403" tags="[[Home Page]]" title="Quest or Rumor">
-<pre>{{$:/DnD/Quest/Button}}
+<div created="20210520031920944" modified="20211105154516132" tags="[[Home Page]]" title="Quest or Rumor">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Quest&quot;/&gt;
+{{$:/DnD/Quest/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Quest/Table&quot; field=&quot;tbl-search&quot;/&gt;
 
@@ -15856,16 +15947,16 @@ Filters:
 &lt;/$set&gt;
 &lt;/$set&gt;</pre>
 </div>
-<div color="#323232" created="20210520032609024" icon="$:/core/images/advanced-search-button" modified="20211104042922193" tags="[[Home Page]] $:/tags/SideBar" title="Quick View">
+<div color="#323232" created="20210520032609024" icon="$:/core/images/advanced-search-button" modified="20211105154141839" tags="[[Home Page]] $:/tags/SideBar" title="Quick View">
 <pre>Add the tag &lt;&lt;tag-pill &quot;Quick View&quot;&gt;&gt;to list things here
 
-!NPCs
+!!NPCs
 ---
 &lt;$list filter=&quot;[tag[Quick View]tag[NPC]sort[tags]]&quot;&gt;
 &lt;$link&gt;''{{!!title}}''&lt;/$link&gt; - &lt;$link&gt;__{{!!location}}__&lt;/$link&gt;&lt;br&gt;&lt;li&gt;{{!!notes}}&lt;/li&gt;
 &lt;/$list&gt;
 
-!Locations
+!!Locations
 ---
 &lt;ul style=&quot;margin:0px;padding:0 0 0 1rem;&quot;&gt;
 &lt;$list filter=&quot;[tag[Quick View]tag[Location]sort[tags]]&quot;&gt;
@@ -15875,14 +15966,16 @@ Filters:
 &lt;/$list&gt;&lt;/li&gt;
 &lt;/$list&gt;&lt;/ul&gt;
 
-!Other
+!!Other
 ---
 &lt;$list filter=&quot;[tag[Quick View]!tag[NPC]!tag[Location]sort[tags]]&quot;&gt;
 &lt;$link&gt;''{{!!title}}''&lt;/$link&gt; - {{{ [enlist{!!tags}search-replace[Quick View],[]search-replace[Public],[]] }}}&lt;br&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div color="#3232ff" created="20210520031813002" modified="20210628144135095" tags="[[Home Page]]" title="Race">
-<pre>{{$:/DnD/Race/Button}}
+<div color="#3232ff" created="20210520031813002" modified="20211105154516133" tags="[[Home Page]]" title="Race">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Race&quot;/&gt;
+{{$:/DnD/Race/Button}}
+
 ---
 Search: &lt;$edit-text tiddler=&quot;$:/DnD/Race/Table&quot; field=&quot;tbl-search&quot;/&gt;
 &lt;$set name=&quot;search&quot; value={{$:/DnD/Race/Table!!tbl-search}}&gt;
@@ -15895,17 +15988,21 @@ Search: &lt;$edit-text tiddler=&quot;$:/DnD/Race/Table&quot; field=&quot;tbl-sea
 <div age="40s" created="20211101041838621" modified="20211101085132302" pc_class="Wizard" pc_level="01" player="Kaeleb" race="Dragonborn" status="Active" tags="PC Public" title="Semigum">
 <pre></pre>
 </div>
-<div color="#323232" created="20210520032600471" icon="$:/core/images/list-bullet" modified="20210630050719537" tags="[[Home Page]]" title="Session Notes">
-<pre>{{$:/DnD/Session/Button}}
+<div color="#323232" created="20210520032600471" icon="$:/core/images/list-bullet" modified="20211105154516133" tags="[[Home Page]]" title="Session Notes">
+<pre>&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Notes&quot;/&gt;
+{{$:/DnD/Session/Button}}
+
 ---
 &lt;$list filter=&quot;[tag[Session Notes]!prefix[$]!sort[date]]&quot;&gt;
 &lt;$link&gt;{{!!title}}&lt;/$link&gt; - &lt;$view field=&quot;date&quot; format=&quot;date&quot; template=&quot;0DD/0MM/YY&quot;/&gt;&lt;br&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div color="#323232" created="20210630023959527" icon="$:/core/images/list-number" modified="20210630051952689" tags="[[Home Page]]" title="Session Prep">
+<div color="#323232" created="20210630023959527" icon="$:/core/images/list-number" modified="20211105154516133" tags="[[Home Page]]" title="Session Prep">
 <pre>Based on Sly Flourish's &quot;Return of the Lazy Dungeon Master&quot;, but template can be edited to whatever you prefer [[Here|$:/DnD/Prep/Template]]
 
+&lt;$edit-text tiddler=&quot;$:/state/CreationName&quot; tag=&quot;input&quot; placeholder=&quot;Name of New Prep&quot;/&gt;
 {{$:/DnD/Prep/Button}}
+
 ---
 &lt;$list filter=&quot;[tag[Session Prep]!prefix[$]!sort[date]]&quot;&gt;
 &lt;$link&gt;{{!!title}}&lt;/$link&gt; - &lt;$view field=&quot;date&quot; format=&quot;date&quot; template=&quot;0DD/0MM/YY&quot;/&gt;&lt;br&gt;
